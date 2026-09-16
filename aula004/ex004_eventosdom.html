@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            justify-content: space-between;
+        }
+        div{
+            padding: 30px;
+            background-color: gray;
+            height: 300px;
+            width: 300px;
+            margin: 150px;
+            text-align: center;
+            text-align: justify;
+            h1{
+                text-align: center;
+            }
+        }
+
+    </style>
+  </head>
+  <body>
+
+    <div id="div1">
+        <h1>BlaBla</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi pariatur corporis beatae cumque dolorem reprehenderit iste? Cupiditate officiis saepe, hic, eos repudiandae molestiae, repellat amet a eius corporis atque ipsa.</p>
+    </div>
+    <div id="div2">
+        <h1>BlaBla</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error commodi quaerat, fuga dolor quasi eos officia tenetur totam, repudiandae illum nostrum consectetur excepturi delectus iste? Quibusdam placeat incidunt facilis dolorem.</p>
+    </div>
+
+    <script>
+        window.document.getElementById('div1').style.color = "green";
+        window.document.getElementById('div2').style.color = "red";
+
+        let evento = window.document.getElementById('div1');
+        evento.addEventListener('mousedown', clicar);
+        evento.addEventListener('mouseenter', clicar1);
+        evento.addEventListener('click', clicar2);
+
+        function clicar(){
+            evento.style.backgroundColor = 'yellow';
+        }
+        function clicar1(){
+            evento.style.backgroundColor='brown';
+        }
+        function clicar2(){
+            evento.style.backgroundColor = 'purple';
+        }
+    </script>
+  </body>
+</html>
