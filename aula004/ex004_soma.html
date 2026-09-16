@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somar</h1>
+    <input type="number" name="num1" id="num1" value="">
+    <input type="number" name="num1" id="num2" value="">
+    <input type="button" value="Somar" onclick="soma()">
+    <input type="button" value="Clica" onclick="teste()">
+    <h2 id="resultado">O resultado da soma é: </h2>
+    <script>
+    
+        function soma(){
+            let somar = Number(window.document.getElementById('num1').value) + Number(window.document.getElementById('num2').value);
+            window.document.querySelector('h2#resultado').innerText = `O resultado da soma é: ${somar}`;
+        }
+        function teste(){
+            window.alert('Alguma coisa');
+        }
+
+    </script>
+</body>
+</html>
