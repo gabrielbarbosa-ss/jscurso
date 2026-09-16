@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 002</title>
+</head>
+<body>
+    <h1>Hello World!</h1>
+    <p>Adeus maldição</p>
+</body>
+
+<script>
+    let msg;  // Criação de variaveis: Const(o valor nunca muda) e Let(Pode mudar o valor)
+    let nome, n1, n2, soma;
+
+    nome = window.prompt("Digite seu nome!");
+    msg = window.alert("Seja bem vindo " + nome + "!");
+
+    n1 = window.prompt("Digite um numero: ");
+    n2 = window.prompt("Digite outro numero: ");
+    soma = n1+n2;
+    window.alert("A soma dos numeros digitado é: " + soma);
+
+    /* 
+    Em Js o + serve para concatenação(junção de strings) e para soma de numeros. O window.prompt captura
+    strings, então temos que passar o tipo de dado de string para number
+    */
+
+    n1 = Number.parseInt(window.prompt("Digite um numero: ")); // Number.parseInt serve para trocar o tipo da variavel para inteiro
+    n2 = Number.parseInt(window.prompt("Digite outro numero: "));//E o Number.parseFloat serve para trocar o tipo da variavel para ponto flutuante
+    soma = n1+n2;
+    window.alert("A soma dos numeros digitado é: " + soma);
+
+
+    n1 = Number(window.prompt("Digite um numero: ")); // Com apenas Number o JS indentifica qual tipo de dado vai ser preciso usar
+    n2 = Number(window.prompt("Digite outro numero: ")); // Mas para forçar um resultado se quiser int ou float é preciso usar Number.ParseTIPO
+    soma = n1+n2;
+    window.alert("A soma dos numeros digitado é: " + soma);
+
+    //Se quiser passar algum dado para String coloca String(n) ou n.toString
+    n1 = Number(window.prompt("Digite um numero: ")); // Com apenas Number o JS indentifica qual tipo de dado vai ser preciso usar
+    n2 = Number(window.prompt("Digite outro numero: ")); // Mas para forçar um resultado se quiser int ou float é preciso usar Number.ParseTIPO
+    soma = String(n1) + String(n2);
+    window.alert(soma);
+
+    //Caso queira colocar variaveis direto na string sem precisar concatenar pode fazer assim:
+    // let nome = "Gabriel";
+    // let idade = 19;
+    // `Meu nome é ${nome} e tenho ${idade} anos` OBS: Para fazer dessa maneira tem que usar a CRASE
+
+    let nome2;
+    let idade;
+    let mensagem;
+
+    nome2 = window.prompt("Digite o nome: ");
+    idade = window.prompt("Digite a idade: ");
+    mensagem = `Meu nome é ${nome2} e minha idade é ${idade}`
+    window.alert(mensagem);
+    window.alert(`Meu nome é ${nome2} e minha idade é ${idade}`)
+
+    //Informações adicionais
+    // let n = "Java Script"
+    // n.length == Aparece o tamanho da string
+    // n.toUpperCase() == Coloca a string em Maiusculo
+    // n.toLowerCase() == Coloca a string em Minusculo
+
+    
+
+</script>
+</html>
