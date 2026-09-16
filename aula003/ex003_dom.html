@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+
+    <style>
+      /*
+        Opção geral que se coloca toda vez que criar um documento html e for mexer com css
+
+        content-box:
+        "Minha width é só o conteúdo."
+
+        border-box:
+        "Minha width já inclui conteúdo + padding + borda."
+        */
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1 id="firstH">Estou aprendendo DOM</h1>
+      <p>O <strong>DOM</strong> são as coisas escritas depois dos pontos</p>
+      <p>Ex: window.document.GetElemmentById('ID');</p>
+    </div>
+
+    <script>
+      //Selecionar os elementos pela tag
+      window.document.getElementsByTagName("tag");
+      //Selecionar por id
+      window.document.getElementById("id");
+      //Selecionar por classe
+      window.document.getElementsByClassName("classe");
+      //Selecionar por nome
+      window.document.getElementsByName("nome"); //Geralmente mais usado em formularios
+      //Selecionar qualquer um sem especificar
+      window.document.querySelector("p"); // Pega o primeiro elemento que corresponde ao seletor(aqui pega o primeiro paragrafo)
+      window.document.querySelectorAll("p"); // Pega todos os elementos do seletor(aqui pega todos os paragrafos)
+
+      //Mas ao invés de toda vez ter que ficar colocando o comando completo podemos colocar o comando em uma variavel
+      let variavel = window.document.getElementById("firstH");
+      variavel.style.color = "green";
+      //Ou pode fazer tudo direto de um mesmo comando
+      window.document.getElementById("firstH").style.color = "green";
+
+      //Podemos mexer tambem direto no conteudo, como fizemos com o css no exemplo anterior
+      let variavel_dois = window.document.getElementsByTagName("h1")[0]; // Uma diferença importante é que aqui voce tem que especificar[0]
+      variavel_dois.innerText = "Mudando texto";
+      //querySelector() retorna um elemento, enquanto getElementsByTagName() retorna uma coleção.
+
+      //ou
+
+      window.document.getElementsByTagName("h1")[0].innerText = "Mudando dnv";
+    </script>
+  </body>
+</html>
